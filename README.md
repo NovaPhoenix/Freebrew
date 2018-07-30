@@ -1,3 +1,3 @@
 # Freebrew
-A Horribly fake program, pretty good to watch.
+Looking to pirate? You've come to the right place!
 Pirates finally get what they deserve!
