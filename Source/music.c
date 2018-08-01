@@ -1,3 +1,4 @@
+//thanks LiquidFenrir!
 #include "music.h"
 #include <stdio.h>
 #include <string.h>
