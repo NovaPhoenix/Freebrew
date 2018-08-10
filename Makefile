@@ -28,11 +28,12 @@ include $(DEVKITARM)/3ds_rules
 #     - <libctru folder>/default_icon.png
 #---------------------------------------------------------------------------------
 APP_TITLE		:= 	FreeBrew
-APP_DESCRIPTION	:=	Game installer:tm:
+APP_LONGTITLE	:= 	FreeBrew - A (Fake) Piracy Tool
+APP_DESCRIPTION	:=	Game Helper:tm:
 APP_AUTHOR		:=	Such Meme, Many Skill
 
 VERSION_MAJOR := 1
-VERSION_MINOR := 1
+VERSION_MINOR := 4
 VERSION_MICRO := 0
 
 TARGET		:=	$(notdir $(CURDIR))
