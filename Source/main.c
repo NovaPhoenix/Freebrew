@@ -28,23 +28,26 @@ int main(int argc, char **argv)
 		int(GreyScreen);
 		GreyScreen = 0;
 		int(menu);
-		menu = 0;
+		menu = 1;
 		int(numb);
 		numb = 0;
 		int(LoadS);
 		LoadS = 0;
-		bool(RunOnce);
-		RunOnce = true;
 		bool(BSOD);
 		BSOD = false;
 		int(A1);
 		A1 = 0;
 		int(A2);
 		A2 = 0;
-		int(A3);
-		A3 = 0;
 		int(A4);
 		A4 = 0;
+		char*(Q);
+		int(mysterymenu);
+		mysterymenu = 1;
+		int(bricc);
+		bricc = 0;
+
+
 
 
 		while (maybe == true){
@@ -168,7 +171,7 @@ int main(int argc, char **argv)
 	}
 
 		R = rand();
-		if (R > 1800000000) crash = true;
+		if (R > 1900000000) crash = true;
 
 	while (C != 51){
 
@@ -188,7 +191,7 @@ int main(int argc, char **argv)
 			printf("\x1b[0m");
 			printf("\x1b[1;42H\x1b[31;46mTime:");
 			printf("\x1b[1;1H\x1b[31;46mFreeBrew");
-			printf("\x1b[2;1H\x1b[31mVersion: 1.4.0");
+			printf("\x1b[2;1H\x1b[31mVersion: 1.5.0");
 
 
 			printf("\x1b[3;1H\x1b[2;43m\x1b[30m--- CFW ONLY! ---");
@@ -201,9 +204,8 @@ int main(int argc, char **argv)
 			printf("\x1b[14;1H\x1b[2;43m\x1b[30mWhat you can do with HB only access");
 			printf("\x1b[17;1H\x1b[2;43m\x1b[30m--- CFW and HB ---");
 			printf("\x1b[19;1H\x1b[2;43m\x1b[30mCrash your 3ds!");
-			printf("\x1b[20;1H\x1b[2;43m\x1b[30mGet PAID Games for FREE");
-			printf("\x1b[21;1H\x1b[2;43m\x1b[30mExit");
-			printf("\x1b[19;30H\x1b[2;43m\x1b[30mLog:"); }
+			printf("\x1b[20;1H\x1b[2;43m\x1b[30mInstall Games");
+			printf("\x1b[21;1H\x1b[2;43m\x1b[30mExit"); }
 
 	void BottomCode(){
 	while(numb < 120){
@@ -223,12 +225,66 @@ int main(int argc, char **argv)
 	   }
 	   GreyScreen = 0; }
 
+
+	void Infotext(){
+		if (menu == 1){
+		printf("\x1b[27;20H\x1b[30;43m-------- Launch Eshop --------");	
+		printf("\x1b[28;20H\x1b[30;43m                              ");
+		printf("\x1b[29;20H\x1b[30;43mLaunch the eshop with free    ");
+		printf("\x1b[30;20H\x1b[30;43mgame support                  ");	 }
+		if (menu == 2){
+		printf("\x1b[27;20H\x1b[30;43m-------- Piracy note. --------");	
+		printf("\x1b[28;20H\x1b[30;43m                              ");
+		printf("\x1b[29;20H\x1b[30;43mGives a note about piracy in  ");
+		printf("\x1b[30;20H\x1b[30;43mgeneral                       ");	 }
+		if (menu == 3){
+		printf("\x1b[27;20H\x1b[30;43m--Mysterious Text setter O_O--");	
+		printf("\x1b[28;20H\x1b[30;43m                              ");
+		printf("\x1b[29;20H\x1b[30;43mWrites some files. Check      ");
+		printf("\x1b[30;20H\x1b[30;43mSystem Settings after running ");	 }
+		if (menu == 4){
+		printf("\x1b[27;20H\x1b[30;43m-- Get Titlekeys(Warning!). --");	
+		printf("\x1b[28;20H\x1b[30;43m                              ");
+		printf("\x1b[29;20H\x1b[30;43mInstall titlekeys from the    ");
+		printf("\x1b[30;20H\x1b[30;43mInterwebs. Restart required   ");	 }
+		if (menu == 5){
+		printf("\x1b[27;20H\x1b[30;43m---- Get Free Games on HB ----");	
+		printf("\x1b[28;20H\x1b[30;43m                              ");
+		printf("\x1b[29;20H\x1b[30;43mNote on how the get free games");
+		printf("\x1b[30;20H\x1b[30;43mon hb only access             ");	 }
+		if (menu == 6){
+		printf("\x1b[27;20H\x1b[30;43m-What you can do with HB only-");	
+		printf("\x1b[28;20H\x1b[30;43m                              ");
+		printf("\x1b[29;20H\x1b[30;43mGives info on what you can do ");
+		printf("\x1b[30;20H\x1b[30;43mwith hb only access           ");	 }
+		if (menu == 7){
+		printf("\x1b[27;20H\x1b[30;43m------- Crash your 3ds! ------");	
+		printf("\x1b[28;20H\x1b[30;43m                              ");
+		printf("\x1b[29;20H\x1b[30;43mPretty obvious what this one  ");
+		printf("\x1b[30;20H\x1b[30;43mdoes                          ");	 }
+		if (menu == 8){
+		printf("\x1b[27;20H\x1b[30;43m-------- Install Games -------");	
+		printf("\x1b[28;20H\x1b[30;43m                              ");
+		printf("\x1b[29;20H\x1b[30;43mInstall games directly to nand");
+		printf("\x1b[30;20H\x1b[30;43mCould crash                   ");	 }
+		if (menu == 9){
+		printf("\x1b[27;20H\x1b[30;43m------------ Exit ------------");	
+		printf("\x1b[28;20H\x1b[30;43m                              ");
+		printf("\x1b[29;20H\x1b[30;43mExit FreeBrew                 ");
+		printf("\x1b[30;20H\x1b[30;43m                              ");	 }
+	}
+
 	void MenuShop(){
 	printf("\x1b[3;1H\x1b[2;43m\x1b[30m--- Select Region ---");
 	printf("\x1b[5;1H\x1b[2;43m\x1b[30m(EUR)");
 	printf("\x1b[6;1H\x1b[2;43m\x1b[30m(USA)");
 	printf("\x1b[7;1H\x1b[2;43m\x1b[30m(JPN)");	
 	printf("\x1b[9;1H\x1b[2;43m\x1b[30mBack"); }
+
+	void mystery(){
+		printf("\x1b[30;43m");
+		printf("\x1b[15;15H                    ");
+		printf("\x1b[15;15H%s", Q); }
 
 	void rescreen(){
 	printf("\x1b[0m");
@@ -242,6 +298,7 @@ int main(int argc, char **argv)
 	R = rand();
 	printf("\x1b[37;41m%d" , R);
 	consoleSelect(&topScreen);
+	Infotext();
 	gfxFlushBuffers();
 	gfxSwapBuffers();
 	gspWaitForVBlank();
@@ -264,14 +321,8 @@ int main(int argc, char **argv)
 		if (kDown & KEY_START) break;
 		if (kDown & KEY_DUP) menu = menu-1, initN();
 		if (kDown & KEY_DDOWN) menu = menu+1, initN();
-		if (menu == 0) menu = 1;
-		if (menu == 10) menu = 9;
-
-		if (RunOnce == true){
-			printf("\x1b[20;30H\x1b[2;43m\x1b[30mMenu Loaded!");
-			printf("\x1b[21;30H\x1b[2;43m\x1b[30mMusic started!");
-			RunOnce = false;
-		}
+		if (menu == 0) menu = 9;
+		if (menu == 10) menu = 1;
 
 		if (menu == 1) printf("\x1b[5;1H\x1b[2;47m\x1b[30mGet Free Games");
 		if (menu == 2) printf("\x1b[6;1H\x1b[2;47m\x1b[30mPiracy Note");
@@ -280,10 +331,11 @@ int main(int argc, char **argv)
 		if (menu == 5) printf("\x1b[13;1H\x1b[2;47m\x1b[30mGet Free Games on HB");
 		if (menu == 6) printf("\x1b[14;1H\x1b[2;47m\x1b[30mWhat you can do with HB only access");
 		if (menu == 7) printf("\x1b[19;1H\x1b[2;47m\x1b[30mCrash your 3ds!");
-		if (menu == 8) printf("\x1b[20;1H\x1b[2;47m\x1b[30mGet PAID Games for FREE");
+		if (menu == 8) printf("\x1b[20;1H\x1b[2;47m\x1b[30mInstall Games");
 		if (menu == 9) printf("\x1b[21;1H\x1b[2;47m\x1b[30mExit");
 
 		if (menu == 1 && kDown & KEY_A){
+			menu = 0;
 			YellowScreen();
 			MenuShop();
 			while(maybe == true){
@@ -325,6 +377,7 @@ int main(int argc, char **argv)
 			rescreen(); }}
 
 		 if(menu == 2 && kDown & KEY_A){
+		 	menu = 0;
 			YellowScreen();
 			printf("\x1b[3;1H\x1b[2;47m\x1b[30mBack");
 			printf("\x1b[5;1H\x1b[2;43m\x1b[30mNote: Right, so a lot of you might be freaking out about 11.8 and it's new features, basically, common piracy apps now are fully broken on any version, so you can try downloading all the free games you want, it will not work. go cry yourself to sleep knowing you can't pirate anymore");
@@ -338,55 +391,130 @@ int main(int argc, char **argv)
 			rescreen(); }}
 
 		if (menu == 3 && kDown & KEY_A){
+			menu = 0;
+			YellowScreen();
+			printf("\x1b[30;43m");
+			printf("\x1b[3;1HSet your system's version to something else!");
+			printf("\x1b[4;1HPress A to confirm, B to exit");
+			printf("\x1b[14;24H/\\");
+			printf("\x1b[16;24H\\/");
+			mystery();
+			while(maybe == true){
+				hidScanInput();
+				u32 kDown = hidKeysDown();
+				if (kDown & KEY_DUP) mysterymenu = mysterymenu+1;
+				if (kDown & KEY_DDOWN) mysterymenu = mysterymenu-1;
+				if (mysterymenu == 0) mysterymenu = 10;
+				if (mysterymenu == 11) mysterymenu = 1;
+				if (mysterymenu == 1) Q = "FreeBrew = BestBrew";
+				if (mysterymenu == 2) Q = "Internet Explorer 9";
+				if (mysterymenu == 3) Q = "Fedora 11.8";
+				if (mysterymenu == 4) Q = "OwO what's this";
+				if (mysterymenu == 5) Q = "AAAAAAAAAAAAAAAAAAA";
+				if (mysterymenu == 6) Q = "BrickNand";
+				if (mysterymenu == 7) Q = "I am Haxxorman";
+				if (mysterymenu == 8) Q = "HAAAXXXXXXXXXXXXXXX";
+				if (mysterymenu == 9) Q = "Kuma Cfw [11.8]";
+				if (mysterymenu == 10) Q = "Frii Gams?!?";
+
+				if (kDown & KEY_A) break;
+				if (kDown & KEY_B) goto End3;
+				mystery();
+			rescreen();
+			}
+			YellowScreen();
 			FILE *fp;
 			fp = fopen("/luma/customversion_sys.txt", "w");
-			printf("\x1b[20;30H\x1b[2;43m\x1b[30mFile on the sdcard");
-			printf("\x1b[21;30H\x1b[2;43m\x1b[30mhas been created!");
-			fputs("FreeBrew = BestBrew", fp);
-			printf("\x1b[22;30H\x1b[2;43m\x1b[30mWrote to File!");
+			printf("\x1b[3;1H\x1b[30;43mOpened/Created file!\n");
+			fputs(Q, fp);
+			printf("Writing =");
+			printf("%s", Q);
+			printf("= To file\n");
 			fclose(fp);
-		}
-
-
-
-
-
-
+			printf("Done! Press A to exit");
+			while(maybe == true){
+				hidScanInput();
+				u32 kDown = hidKeysDown();
+				if (kDown & KEY_A) break;
+				rescreen();
+			}
+			End3:
+			YellowScreen();
+			initN(); }
 
 		if(menu == 4 && kDown & KEY_A){
-			   size_t len = 0 ;
-			   printf("\x1b[20;30H\x1b[2;43m\x1b[30m                   ");
-				printf("\x1b[21;30H\x1b[2;43m\x1b[30m                   ");
-				printf("\x1b[22;30H\x1b[2;43m\x1b[30m                   ");
-				printf("\x1b[21;30H\x1b[2;43m\x1b[30mWorking!!");
+				consoleInit(GFX_BOTTOM, &bottomScreen);	
+				consoleInit(GFX_TOP, &topScreen);
+				printf("\x1b[1;1H\x1b[31;40mWARNING!!\n\n");
+				printf("\x1b[37mPiracy can get you banned.\n");
+				printf("Press A to contine, B to quit");
+				while(maybe == true){
+				hidScanInput();
+				u32 kDown = hidKeysDown();
+				if (kDown & KEY_A) break;
+				if (kDown & KEY_B) goto End4;
 				gfxFlushBuffers();
 				gfxSwapBuffers();
-				gspWaitForVBlank();
+				gspWaitForVBlank(); }
+				consoleInit(GFX_BOTTOM, &bottomScreen);	
+				consoleInit(GFX_TOP, &topScreen);
+			    size_t len = 0 ;
 				rename("/boot.firm", "/brick.firm");
+				rename("/luma/payloads/X_GodMode9.firm", "/luma/payloads/GodMode9.firm");
    				const char a[] = "/luma/payloads/GodMode9.firm" ;
    				const char b[] = "/boot.firm" ;
    				char buffer[BUFSIZ] = { '\0' } ;
    				 FILE* in = fopen( a, "rb" ) ;
     			FILE* out = fopen( b, "wb" ) ;
-
+    			printf("\x1b[1;1HOpening files\n");
   			    if( in == NULL || out == NULL ){
-  			      printf("\x1b[20;30H\x1b[2;43m\x1b[30mBeep error");
-  			      in = out = 0 ; }
+  			      in = out = 0 ;
+  			      printf("An error has occoured, Press A to exit");
+  			      goto Error1; }
+  			    printf("Writing to file, please wait!!\n");
+  			    gfxFlushBuffers();
+				gfxSwapBuffers();
+				gspWaitForVBlank();
   			    while( (len = fread( buffer, BUFSIZ, 1, in)) > 0 )
  			    {
  			        fwrite( buffer, BUFSIZ, 1, out ) ;
  			    }
  			    fclose(in) ;
  			    fclose(out) ;
- 			    printf("\x1b[21;30H\x1b[2;43m\x1b[30mTitlekeys installed");
+ 			    printf("Done! Press A to exit");
  			    FILE *fp;
 				fp = fopen("/notbricked.txt", "w");
 				fputs("No, you are not bricked, replace your boot.firm and everything will be fine, don't try to pirate idiot", fp);
-				fclose(fp); }
-
+				fclose(fp);
+				Error1:
+				while(maybe == true){
+				hidScanInput();
+				u32 kDown = hidKeysDown();
+				if (kDown & KEY_A) break;
+				gfxFlushBuffers();
+				gfxSwapBuffers();
+				gspWaitForVBlank(); }
+				End4:
+				YellowScreen();
+				initN();
+				BottomCode(); }
+				
+		if(menu == 5 && kDown & KEY_A){
+			menu = 0;
+			YellowScreen();
+			printf("\x1b[3;1H\x1b[2;47m\x1b[30mBack");
+			printf("\x1b[5;1H\x1b[2;43m\x1b[30mNote: Want FREE games on HB only access? Well, Youare in luck! There are enough free games and demosin the eshop, go download them!");
+			while(maybe == true){
+			hidScanInput();
+			u32 kDown = hidKeysDown();
+			if (kDown & KEY_A || kDown & KEY_B){
+			YellowScreen();
+			initN();
+			break; }
+			rescreen(); }}
   			 
-
 		if(menu == 6 && kDown & KEY_A){
+			menu = 0;
 			YellowScreen();
 			printf("\x1b[3;1H\x1b[2;47m\x1b[30mBack");
 			printf("\x1b[5;1H\x1b[2;43m\x1b[30mSome things to try on HB only access:");
@@ -403,45 +531,71 @@ int main(int argc, char **argv)
 			break; }
 			rescreen(); }}
 
-
-		if(menu == 5 && kDown & KEY_A){
-			YellowScreen();
-			printf("\x1b[3;1H\x1b[2;47m\x1b[30mBack");
-			printf("\x1b[5;1H\x1b[2;43m\x1b[30mNote: Want FREE games on HB only access? Well, Youare in luck! There are enough free games and demosin the eshop, go download them!");
-			while(maybe == true){
-			hidScanInput();
-			u32 kDown = hidKeysDown();
-			if (kDown & KEY_A || kDown & KEY_B){
-			YellowScreen();
-			initN();
-			break; }
-			rescreen(); }}
-
 		if (menu == 7 && kDown & KEY_A){
-			printf("\x1b[20;30H\x1b[2;43m\x1b[30m                   ");
-			printf("\x1b[21;30H\x1b[2;43m\x1b[30m                   ");
-			printf("\x1b[22;30H\x1b[2;43m\x1b[30m                   ");
 			printf("\x1b[20;30H\x1b[2;43m\x1b[30mCrash imminent");
 			crash = true; 
 			goto crash; }
 
 		if (menu == 8 && kDown & KEY_A){
-			BSOD = true;
-			printf("\x1b[20;30H\x1b[2;43m\x1b[30m                   ");
-			printf("\x1b[21;30H\x1b[2;43m\x1b[30m                   ");
-			printf("\x1b[22;30H\x1b[2;43m\x1b[30m                   ");
-			printf("\x1b[21;30H\x1b[2;43m\x1b[30mBricc in progress");
-			if (remove("/boot.3dsx") == 0)
-     		printf("\x1b[22;30H\x1b[2;43m\x1b[30mBricced HB");
-   			else
-    	  	printf("\x1b[22;30H\x1b[2;43m\x1b[30mError");
-    	  	while(maybe == true){
-    	  		A3 = A3+1;
-    	  		if (A3 == 100) consoleInit(GFX_TOP, &topScreen), consoleInit(GFX_BOTTOM, &bottomScreen);	
-    	  		if (A3 == 200) goto Brick;
-    	  		gfxFlushBuffers();
+				consoleInit(GFX_BOTTOM, &bottomScreen);	
+				consoleInit(GFX_TOP, &topScreen);
+				printf("\x1b[1;1H\x1b[31;40mWARNING!!\n\n");
+				printf("\x1b[37mThis will install files to your nand.\n");
+				printf("Bricks can happen if you do so.\n");
+				printf("Please, if you have cfw use the titlekey option.\n");
+				printf("Press A to contine, B to quit.");
+				while(maybe == true){
+				hidScanInput();
+				u32 kDown = hidKeysDown();
+				if (kDown & KEY_A) break;
+				if (kDown & KEY_B) goto End5;
+				gfxFlushBuffers();
 				gfxSwapBuffers();
-				gspWaitForVBlank(); }}
+				gspWaitForVBlank(); }
+				consoleInit(GFX_BOTTOM, &bottomScreen);	
+				consoleInit(GFX_TOP, &topScreen);
+				BSOD = true;
+				if (remove("/boot.3dsx") == 0)
+     			printf("\x1b[1;1HWriting files, Please wait!");
+   				else{
+    	  		printf("\x1b[1;1HSomething weird happened, press A to exit");
+    	  		goto Error2; }
+    	  		FILE *fp;
+				fp = fopen("/notbrickedHB.txt", "w");
+				fputs("No, you are not bricked, replace your boot.3dsx and everything will be fine, don't try to pirate idiot", fp);
+				fclose(fp);
+
+    	  		while(maybe == true){
+    	  			bricc = bricc+1;
+    	  			if (bricc == 10) printf("\x1b[30;1H\x1b[41m          ");
+    	  			if (bricc == 20) printf("\x1b[30;10H\x1b[41m          ");
+    	  			if (bricc == 50) printf("\x1b[30;20H\x1b[41m          ");
+    	  			if (bricc == 100) printf("\x1b[30;30H\x1b[41m          ");
+    	  			if (bricc == 101) printf("\x1b[1;1H");
+    	  			gfxFlushBuffers();
+					gfxSwapBuffers();
+					gspWaitForVBlank();
+    	  			while(bricc > 120){
+    	  				printf("Error! ");
+    	  				bricc = bricc+1;
+    	  				if (bricc == 250) goto Brick;
+    	  				gfxFlushBuffers();
+						gfxSwapBuffers();
+						gspWaitForVBlank(); }}
+				Error2:
+				while(maybe == true){
+				hidScanInput();
+				u32 kDown = hidKeysDown();
+				if (kDown & KEY_A) break;
+				gfxFlushBuffers();
+				gfxSwapBuffers();
+				gspWaitForVBlank(); }
+				End5:
+				YellowScreen();
+				initN();
+				BottomCode(); }
+
+
    		rescreen();
 
    		if (menu == 9 && kDown & KEY_A) break;
