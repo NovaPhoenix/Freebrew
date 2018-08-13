@@ -468,6 +468,7 @@ int main(int argc, char **argv)
     			FILE* out = fopen( b, "wb" ) ;
     			printf("\x1b[1;1HOpening files\n");
   			    if( in == NULL || out == NULL ){
+			    rename("/brick.firm", "/boot.firm");
   			      in = out = 0 ;
   			      printf("An error has occoured, Press A to exit");
   			      goto Error1; }
