@@ -7,5 +7,5 @@ https://discord.gg/Eb9vAkT
 get help here
 
 
-If you really feel the need to donate, you can donate here
+If you really feel the need to donate, you can donate here                                                                     
 paypal.me/pools/c/875ZUQgHry
