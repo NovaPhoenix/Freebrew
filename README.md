@@ -8,4 +8,4 @@ get help here
 
 
 If you really feel the need to donate, you can donate here                                                                     
-https://paypal.me/pools/c/875ZUQgHry
+https://www.paypal.com/pools/c/875ZUQgHry
