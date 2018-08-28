@@ -1,3 +1,4 @@
+//new version may be in development
 #include <3ds.h>
 #include <stdio.h>
 #include <time.h>
