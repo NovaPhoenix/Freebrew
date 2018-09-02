@@ -242,7 +242,8 @@ int main(int argc, char* argv[]) {
 
     		if (tools == 0 && kDown & KEY_A) svcBreak(USERBREAK_PANIC);
     		if (tools == 2 && kDown & KEY_A){ while (loop == true) { snekgame(); hidScanInput(); u32 kDown = hidKeysDown(); if (kDown & KEY_START) break; } consoleInit(GFX_BOTTOM, &bottomScreen); } 
-    		if (tools == 4 && kDown & KEY_A){
+    		if (tools == 3 && kDown & KEY_A){ FILE *fp; fp = fopen("/luma/customversion_sys.txt", "w"); fputs("Sys. 2.1.0-4E", fp); fclose(fp); printf("\x1b[30;1HWritten to file!"); }
+    		if (tools == 4 && kDown & KEY_A){ 
     				u8 param[0x300];
 					u8 hmac[0x20];
 					memset(param, 0, sizeof(param));
