@@ -11,7 +11,7 @@
 #include "music.h"
 
 float A = 1;
-int haxstate = 0, menu = 1, X = 0, Y = 0, options = 0, region = 0, tools = 0, R = 0, Xsnek = 15, Ysnek = 15, Xsnack = 15, Ysnack = 15, score = 0, direction = 1;
+int haxstate = 0, menu = 1, X = 0, Y = 0, options = 0, region = 0, tools = 0, R = 0, Xsnek = 15, Ysnek = 15, Xsnack = 15, Ysnack = 15, score = 0, direction = 1, timer = 0, minutetimer = 0;
 bool loop = true, debug = false, music = true;
 
 int main(int argc, char* argv[]) {
@@ -241,6 +241,7 @@ int main(int argc, char* argv[]) {
     		if (music == true) advance(); 
 
     		if (tools == 0 && kDown & KEY_A) svcBreak(USERBREAK_PANIC);
+        if (tools == 1 && kDown & KEY_A){ while (loop == true){ gspWaitForVBlank(); hidScanInput(); u32 kDown = hidKeysDown(); if (kDown & KEY_START) break; timer = timer+1; minutetimer = timer/60; printf("\x1b[15;1HSeconds since launch: %d\nPress start to exit", minutetimer); } timer = 0; consoleInit(GFX_BOTTOM, &bottomScreen); } 
     		if (tools == 2 && kDown & KEY_A){ while (loop == true) { snekgame(); hidScanInput(); u32 kDown = hidKeysDown(); if (kDown & KEY_START) break; } consoleInit(GFX_BOTTOM, &bottomScreen); } 
     		if (tools == 3 && kDown & KEY_A){ FILE *fp; fp = fopen("/luma/customversion_sys.txt", "w"); fputs("Sys. 2.1.0-4E", fp); fclose(fp); printf("\x1b[30;1HWritten to file!"); }
     		if (tools == 4 && kDown & KEY_A){ 
