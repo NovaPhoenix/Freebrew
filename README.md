@@ -1,3 +1,5 @@
+## **NOTE: DO NOT RUN THIS ON YOUR 3DS. IT'S NOT VERY DESTRUCTIVE, BUT YOU'VE BEEN WARNED. THIS REPO IS FOR ARCHIVAL PURPOSES**
+
 # Freebrew
 Looking to pirate on your 3ds? You've come to the right place!                                                                             
 Pirates finally get what they deserve!                                                                                                     
